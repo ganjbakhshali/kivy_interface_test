@@ -5,6 +5,9 @@ from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
+
+Builder.load_file('Xray_interface.kv')
 
 class MyGridLayout(GridLayout):
     name=ObjectProperty(None)

@@ -1,0 +1,84 @@
+#:import utils kivy.utils
+<Button>
+    font_size:32
+    background_normal:""
+<Label>
+    font_size:32
+<MyGridLayout>
+
+    name:name
+    lname:Lname
+    phone:phone
+
+    GridLayout:
+        rows:2
+        size:root.width, root.height
+
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "name: "                
+            TextInput:
+                id: name
+                multiline:False
+
+            Label:
+                text: "Last name: "                
+            TextInput:
+                id: Lname
+                multiline:False
+
+            Label:
+                text:"phone: "                
+            TextInput:
+                id: phone
+                multiline:False
+
+        BoxLayout:
+            cols:3
+            orientation: "vertical"
+            size: root.width, root.height
+            padding:20
+            spaceing:50
+
+            Button:
+                size_hint_y: None
+
+                text: "Submit"
+                font_size:32
+                on_press:root.press()
+                
+                #background_color:(1,0,1,1)
+                background_color:utils.get_color_from_hex('#cefb00')
+                size_hint:(0.5,0.5)
+                pos_hint:{'center_x':0.5}
+
+            Button:
+                size_hint_y: None
+
+                text: "Submit"
+                font_size:32
+                on_press:root.press()
+                
+                #background_color:(1,0,1,1)
+                background_color:utils.get_color_from_hex('#c00000')
+                size_hint:(0.5,0.5)
+
+            Button:
+                size_hint_y: None
+
+                text: "Submit"
+                font_size:32
+                on_press:root.press()
+                
+                #background_color:(1,0,1,1)
+                background_color:utils.get_color_from_hex('#eefa00')
+
+
+
+
+            
+
+        
