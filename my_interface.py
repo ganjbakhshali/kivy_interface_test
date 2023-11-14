@@ -6,6 +6,7 @@ from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
+from kivy.core.window import Window
 
 Builder.load_file('Xray_interface.kv')
 
@@ -80,6 +81,7 @@ class MyGridLayout(GridLayout):
     
 class Xray_application(App):
     def build(self):
+        # Window.Clearcolor=(1,1,1,1) #turn to background to white
         return MyGridLayout()
 
 if __name__ == "__main__":

@@ -6,6 +6,14 @@
     font_size:32
 <MyGridLayout>
 
+    canvas.before:
+        Color:
+            rgba: (1,0,0,1)
+        Rectangle:
+            size:self.size
+            pos:self.pos
+
+
     name:name
     lname:Lname
     phone:phone
@@ -25,7 +33,22 @@
                 multiline:False
 
             Label:
-                text: "Last name: "                
+                text: "Last name: "
+                #text properties
+                color:(0,1,1,1)
+                bold:True
+                outline_color:(0,0,0)
+                outline_width:2
+
+
+                background_color:(1,20/255,1,1)
+
+                canvas.before:
+                    Color:
+                        rgba: self.background_color
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
             TextInput:
                 id: Lname
                 multiline:False

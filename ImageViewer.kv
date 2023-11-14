@@ -1,0 +1,15 @@
+# image_viewer.kv
+<ImageViewerLayout>:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    FileChooserListView:
+        id: file_chooser
+
+    Button:
+        text: "Load Image"
+        on_press: root.load_image()
+
+    Image:
+        id: image_widget
